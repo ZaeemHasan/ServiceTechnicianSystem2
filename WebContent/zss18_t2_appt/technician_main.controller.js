@@ -165,6 +165,14 @@ return Controller.extend("zss18_t2_appt.technician_main", {
 		else{
 			oTickets.setBusy(true);
 			
+			var readBtn = this.getView().byId("idReadTicket");
+			var updateBtn = this.getView().byId("idUpdateTicketTech");
+			var changeBtn = this.getView().byId("idChangeTicketTech");
+			
+			readBtn.setEnabled(false);
+			updateBtn.setEnabled(false);
+			changeBtn.setEnabled(false);
+			
 			var oGridTicketDetails = this.getView().byId("gridIdTicketTechRead");
 			oGridTicketDetails.setVisible(true);
 			oGridTicketDetails.focus();
@@ -283,7 +291,15 @@ return Controller.extend("zss18_t2_appt.technician_main", {
 		}
 		else{
 			oTickets.setBusy(true);
+
+			var readBtn = this.getView().byId("idReadTicket");
+			var updateBtn = this.getView().byId("idUpdateTicketTech");
+			var changeBtn = this.getView().byId("idChangeTicketTech");
 			
+			readBtn.setEnabled(false);
+			updateBtn.setEnabled(false);
+			changeBtn.setEnabled(false);
+						
 			var oGridTicketUpdate = this.getView().byId("gridIdTicketTechUpdate");
 			oGridTicketUpdate.setVisible(true);
 			oGridTicketUpdate.focus();
@@ -436,6 +452,14 @@ return Controller.extend("zss18_t2_appt.technician_main", {
 			oSave.setText("Save");
 			oSave.setVisible(false);
 
+			var readBtn = this.getView().byId("idReadTicket");
+			var updateBtn = this.getView().byId("idUpdateTicketTech");
+			var changeBtn = this.getView().byId("idChangeTicketTech");
+			
+			readBtn.setEnabled(true);
+			updateBtn.setEnabled(true);
+			changeBtn.setEnabled(true);
+			
 			oServiceTicket.setBusy(false);
 			oServiceTicket.focus();
 			
@@ -461,12 +485,20 @@ return Controller.extend("zss18_t2_appt.technician_main", {
 	
 	onCloseTechnicianUpdate : function(){
 		
-		var oTickets = this.getView().byId("service_tickets_technician_id");
-		oTickets.setBusy(false);
-		oTickets.focus();
 		var oGridTicketsUpdate = this.getView().byId("gridIdTicketTechUpdate");
 		oGridTicketsUpdate.setVisible(false);
 		
+		var readBtn = this.getView().byId("idReadTicket");
+		var updateBtn = this.getView().byId("idUpdateTicketTech");
+		var changeBtn = this.getView().byId("idChangeTicketTech");
+		
+		readBtn.setEnabled(true);
+		updateBtn.setEnabled(true);
+		changeBtn.setEnabled(true);
+
+		var oTickets = this.getView().byId("service_tickets_technician_id");
+		oTickets.setBusy(false);
+		oTickets.focus();
 	},
 
 	oldET: "",
@@ -483,6 +515,14 @@ return Controller.extend("zss18_t2_appt.technician_main", {
 		}
 		else{
 			oTickets.setBusy(true);
+
+			var readBtn = this.getView().byId("idReadTicket");
+			var updateBtn = this.getView().byId("idUpdateTicketTech");
+			var changeBtn = this.getView().byId("idChangeTicketTech");
+			
+			readBtn.setEnabled(false);
+			updateBtn.setEnabled(false);
+			changeBtn.setEnabled(false);			
 			
 			var oGridTicketChange = this.getView().byId("gridIdTicketTechChange");
 			oGridTicketChange.setVisible(true);
@@ -623,6 +663,14 @@ return Controller.extend("zss18_t2_appt.technician_main", {
 			oSave.setText("Save");
 			oSave.setVisible(false);
 
+			var readBtn = this.getView().byId("idReadTicket");
+			var updateBtn = this.getView().byId("idUpdateTicketTech");
+			var changeBtn = this.getView().byId("idChangeTicketTech");
+			
+			readBtn.setEnabled(true);
+			updateBtn.setEnabled(true);
+			changeBtn.setEnabled(true);			
+			
 			oServiceTicket.setBusy(false);
 			oServiceTicket.focus();
 			
@@ -648,11 +696,20 @@ return Controller.extend("zss18_t2_appt.technician_main", {
 	
 	onCloseTechnicianChange : function(){
 		
+		var oGridTicketsChange = this.getView().byId("gridIdTicketTechChange");
+		oGridTicketsChange.setVisible(false);
+
+		var readBtn = this.getView().byId("idReadTicket");
+		var updateBtn = this.getView().byId("idUpdateTicketTech");
+		var changeBtn = this.getView().byId("idChangeTicketTech");
+		
+		readBtn.setEnabled(true);
+		updateBtn.setEnabled(true);
+		changeBtn.setEnabled(true);
+
 		var oTickets = this.getView().byId("service_tickets_technician_id");
 		oTickets.setBusy(false);
 		oTickets.focus();
-		var oGridTicketsChange = this.getView().byId("gridIdTicketTechChange");
-		oGridTicketsChange.setVisible(false);
 		
 	},	
 	
