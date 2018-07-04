@@ -210,6 +210,8 @@ return Controller.extend("zss18_t2_appt.technician_main", {
 			else{
 				oExpComplTime.setEditable(false);
 				oExpComplTime.setValue(items[0].Expcted_Complt_Dt);
+				this.getView().byId("labelExpctedCompltDtId").setVisible(true);
+				oExpComplTime.setVisible(true);
 			}
 			
 			var oStatus = this.getView().byId("statusId");
@@ -238,18 +240,34 @@ return Controller.extend("zss18_t2_appt.technician_main", {
 			else{
 				oTechnicianNote.setEditable(false);
 				oTechnicianNote.setValue(items[0].Technician_Note);
+				this.getView().byId("labelTechnicianNoteId").setVisible(true);
+				oTechnicianNote.setVisible(true);
 			}
 				
 		}	
 	},
 	
 	onCloseTechnicianRead : function(){
+
+		this.getView().byId("labelExpctedCompltDtId").setVisible(true);
+		this.getView().byId("expctedCompltDtId").setVisible(true);
+		this.getView().byId("labelTechnicianNoteId").setVisible(true);
+		this.getView().byId("technicianNoteId").setVisible(true);
 		
+		var oGridTicketsDetails = this.getView().byId("gridIdTicketTechRead");
+		oGridTicketsDetails.setVisible(false);
+		
+		var readBtn = this.getView().byId("idReadTicket");
+		var updateBtn = this.getView().byId("idUpdateTicketTech");
+		var changeBtn = this.getView().byId("idChangeTicketTech");
+		
+		readBtn.setEnabled(true);
+		updateBtn.setEnabled(true);
+		changeBtn.setEnabled(true);
+				
 		var oTickets = this.getView().byId("service_tickets_technician_id");
 		oTickets.setBusy(false);
 		oTickets.focus();
-		var oGridTicketsDetails = this.getView().byId("gridIdTicketTechRead");
-		oGridTicketsDetails.setVisible(false);
 		
 	},
 	
