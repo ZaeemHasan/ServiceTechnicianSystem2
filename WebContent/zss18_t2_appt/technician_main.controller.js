@@ -9,7 +9,7 @@ sap.ui.define([
     "use strict";
     
 
-return Controller.extend("servicetechniciansystem2.technician_main", {
+return Controller.extend("zss18_t2_appt.technician_main", {
 
 /**
  * Called when a controller is instantiated and its View controls (if available)
