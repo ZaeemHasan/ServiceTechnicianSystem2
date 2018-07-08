@@ -1,0 +1,52 @@
+{
+    "_version": "1.1.0",
+	
+	"start_url": "index.html",
+	
+    "sap.app": {
+        "_version": "1.1.0",
+        "id": "ZSS18_T2_APPT",
+        "type": "application",
+        "title": "Service Technician Support"
+    	},
+    
+    "sap.ui": {
+        "_version": "1.1.0",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_bluecrystal"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "resources": {
+            "js": 
+                {
+                    "uri": "libs/moment.js"
+                }
+         },
+        "dependencies": {
+            
+            "libs": {
+                "sap.m": {                   
+
+                },
+                "sap.ui.core": {                   
+
+                },                
+                "sap.ui.layout":{
+                }
+            }
+        },
+        "rootView": "ZSS18_T2_APPT.zss18_t2_appt.technician_main",
+        "handleValidation": true,
+        "viewType" : "XML",
+        "config": {
+          
+        }
+	}
+}
