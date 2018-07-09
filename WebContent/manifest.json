@@ -42,9 +42,13 @@
                 }
             }
         },
-        "rootView": "ZSS18_T2_APPT.zss18_t2_appt.technician_main",
-        "handleValidation": true,
-        "viewType" : "XML",
+        "rootView": {
+            "viewName" : "ZSS18_T2_APPT.zss18_t2_appt.technician_main",
+            "id" : "idtechnician_main1",
+            "type" : "XML"
+        },
+       
+        
         "config": {
           
         }

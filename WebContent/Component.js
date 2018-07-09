@@ -6,7 +6,14 @@ sap.ui.define(['jquery.sap.global','sap/ui/core/UIComponent'],
 	var Component = UIComponent.extend("ZSS18_T2_APPT.Component", {
 		metadata : {
 			manifest : "json"
-		}
+		},
+		init : function ()
+
+		  {
+
+		  sap.ui.core.UIComponent.prototype.init.apply(this, arguments);
+
+		  }
 	});
 	return Component;
 });
