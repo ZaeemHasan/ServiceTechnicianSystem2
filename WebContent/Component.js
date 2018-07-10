@@ -55,6 +55,13 @@ sap.ui.core.UIComponent.extend("ZSS18_T2_APPT.Component", {
 		//oView.setModel(deviceModel, "device");
 
 		// done
+		
+		// set device model
+		var oDeviceModel = new sap.ui.model.json.JSONModel(sap.ui.Device);
+		oDeviceModel.setDefaultBindingMode("OneWay");
+		this.setModel(oDeviceModel, "device");
+		
+		
 		return oView;
 	}
 });
