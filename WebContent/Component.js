@@ -1,23 +1,3 @@
-/*jQuery.sap.declare("ZSS18_T2_APPT.Component");
-sap.ui.define(['jquery.sap.global','sap/ui/core/UIComponent'],
-	function(jQuery, UIComponent) {
-	"use strict";
-
-	var Component = UIComponent.extend("ZSS18_T2_APPT.Component", {
-		metadata : {
-			manifest : "json"
-		},
-		init : function ()
-
-		  {
-
-		  sap.ui.core.UIComponent.prototype.init.apply(this, arguments);
-
-		  }
-	});
-	return Component;
-});*/
-
 jQuery.sap.declare("ZSS18_T2_APPT.Component");
 sap.ui.core.UIComponent.extend("ZSS18_T2_APPT.Component", {
 	
@@ -45,17 +25,6 @@ sap.ui.core.UIComponent.extend("ZSS18_T2_APPT.Component", {
 			viewData 	: { component : this }
 		});
 					
-		// set device model
-		/*var deviceModel = new sap.ui.model.json.JSONModel({
-			isPhone 	: jQuery.device.is.phone,
-			listMode 	: (jQuery.device.is.phone) ? "None" 	: "SingleSelectMaster",
-			listItemType: (jQuery.device.is.phone) ? "Active" 	: "Inactive"
-		});*/
-		//deviceModel.setDefaultBindingMode("OneWay");
-		//oView.setModel(deviceModel, "device");
-
-		// done
-		
 		// set device model
 		var oDeviceModel = new sap.ui.model.json.JSONModel(sap.ui.Device);
 		oDeviceModel.setDefaultBindingMode("OneWay");
