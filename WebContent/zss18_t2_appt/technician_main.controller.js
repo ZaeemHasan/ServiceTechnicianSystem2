@@ -36,7 +36,7 @@ return Controller.extend("ZSS18_T2_APPT.zss18_t2_appt.technician_main", {
 		var _oStatusFilter = null;
 	},
 	
-	userName: "ABAP-01",//ABAP-01,MASTER-ADM
+	userName: "DEV-324",//ABAP-01,MASTER-ADM
 	filteronTechnicianView : function(view) {
 		
 		var serviceURL = "/sap/opu/odata/sap/ZSS18_T2_TICKET_SRV/";
